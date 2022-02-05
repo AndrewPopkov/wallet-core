@@ -44,7 +44,7 @@ TEST(EthereumFee, suggestHighBaseFee) {
     auto fee = Fee::suggestFee(history).dump();
     auto expected = R"|(
         {
-            "baseFee": "1098508176069",
+            "baseFee": "1098508176070",
             "maxPriorityFee": "23492129063"
         }
     )|";

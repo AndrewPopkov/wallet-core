@@ -52,6 +52,7 @@
 #include "Waves/Entry.h"
 #include "Zcash/Entry.h"
 #include "Zilliqa/Entry.h"
+#include "Westend/Entry.h"
 // end_of_coin_includes_marker_do_not_modify
 
 using namespace TW;
@@ -76,6 +77,7 @@ Harmony::Entry harmonyDP;
 Icon::Entry iconDP;
 IoTeX::Entry iotexDP;
 Kusama::Entry kusamaDP;
+Westend::Entry westendDP;
 Nano::Entry nanoDP;
 NEAR::Entry nearDP;
 Nebulas::Entry nebulasDP;
@@ -145,6 +147,7 @@ CoinEntry* coinDispatcher(TWCoinType coinType) {
         case TWCoinTypeICON: entry = &iconDP; break;
         case TWCoinTypeIoTeX: entry = &iotexDP; break;
         case TWCoinTypeKusama: entry = &kusamaDP; break;
+        case TWCoinTypeWestend: entry = &westendDP; break;
         case TWCoinTypeNano: entry = &nanoDP; break;
         case TWCoinTypeNEAR: entry = &nearDP; break;
         case TWCoinTypeNebulas: entry = &nebulasDP; break;

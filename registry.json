@@ -861,6 +861,30 @@
     }
   },
   {
+    "id": "Westend",
+    "name": "Westend",
+    "coinId": 978,
+    "symbol": "WND",
+    "decimals": 12,
+    "blockchain": "Polkadot",
+    "derivationPath": "m/44'/978'/0'/0'/0'",
+    "curve": "ed25519",
+    "publicKeyType": "ed25519",
+    "explorer": {
+      "url": "https://westend.subscan.io",
+      "txPath": "/extrinsic/",
+      "accountPath": "/account/",
+      "sampleTx": "0xa2a6b2e94b2d6878044a3406664191c540d15513542e6086e08650757c381cd1",
+      "sampleAccount": "5GY41FZCHB313N4ypZc8r9QMvnPbVeVVSuyqneGB3b9H8WvH"
+    },
+    "info": {
+      "url": "https://wiki.polkadot.network/docs/maintain-networks",
+      "source": "https://github.com/paritytech/polkadot",
+      "rpc": "wss://westend.api.subscan.io",
+      "documentation": "https://polkadot.js.org/api/substrate/rpc.html"
+    }
+  },
+  {
     "id": "aeternity",
     "name": "Aeternity",
     "coinId": 457,

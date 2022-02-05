@@ -19,6 +19,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set (CMAKE_C_STANDARD 11)
 set (CMAKE_C_STANDARD_REQUIRED ON)
 
+include_directories(/usr/local/opt/curl/include/)
+set(CURL_LIBRARY "-lcurl")
+find_package(CURL REQUIRED)
+
+find_package(nlohmann_json  REQUIRED)
+
+include_directories(${CURL_INCLUDE_DIR})
+#target_link_libraries(2700 ${CURL_LIBRARIES})
 # Include dirs:
 # ${WALLET_CORE}/include -- public TrustWalletCore includes
 # ${WALLET_CORE}/src -- internal TrustWalletCore files, for signer protobuf messages
@@ -65,4 +73,4 @@ SET (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${PLATFORM_LINK_FLAGS}")
 add_executable (sample sample.cpp)
 
 # link with our library, and default platform libraries
-target_link_libraries (sample TrustWalletCore TrezorCrypto protobuf pthread ${PLATFORM_LIBS})
+target_link_libraries (sample TrustWalletCore TrezorCrypto protobuf pthread ${PLATFORM_LIBS} ${CURL_LIBRARIES}  nlohmann_json::nlohmann_json)
